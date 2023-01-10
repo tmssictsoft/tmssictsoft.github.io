@@ -1,0 +1,1832 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comprehensive Accounting(CA) Administration Panel</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+   <style type="text/css">
+      p{
+         font-size: smaller;
+   };
+   
+   
+   </style>
+
+
+
+
+   <body class="body-green">
+      <div class="page-wrapper">
+      <!-- ******Header****** -->
+      <header id="header" class="header">
+         <div class="container">
+            <div class="branding">
+               <h1 class="logo">
+                  <a href="index.html">
+                      <img loading="lazy" class=" img-responsive" data-src="assets/images/logo.png">
+                  </a>
+               </h1>
+            </div>
+            <!--//branding-->
+            <ol class="breadcrumb" style="background: #494d55;">
+               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+               <li class="breadcrumb-item"><a href="">Documentation</a></li>
+               <li class="breadcrumb-item"><a href="">Bangla Version</a></li>
+            </ol>
+            <div class="top-search-box">
+               <form class="form-inline search-form justify-content-center" action="" method="get">
+                  <!--  <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+                     <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button> -->
+                  <!-- <button type="submit" class="btn search-btn demo_button" value="Search">See Free Demo</i></button> -->
+               </form>
+            </div>
+         </div>
+         <!--//container-->
+      </header>
+      <!--//header-->
+      <nav class="navbar navbar-default header_menu">
+         <ul class="nav navbar-nav" style="margin-left: -52%;display: inline;">
+            <li><a href="/index.html"><span class="menu_title">Home</span></a></li>
+            <li class="active"><a href="/accounts/index.html"><span class="menu_title">Admin User Panel &nbsp;</span></a></li>
+            <li><a href="/accounts_admin/index.html"><span class="menu_title">Project User Panel &nbsp;</span></a></li>
+         </ul>
+      </nav>
+      <div class="doc-wrapper">
+      <div class="container">
+      <div id="doc-header" class="doc-header text-center">
+         <h1 class="doc-title" style="margin-left: 226px;color:darkblue;"><i class="fas fa-book-open"></i> User Manual ( Bangla Version ) </h1>
+         <div class="meta"  style="margin-left: 226px;"> কিভাবে আপনি সফটওয়্যার টি ব্যবহার করবেন?</div>
+         <button class="btn btn-primary " id="print_fullpage" onclick="printFullpage('printfullpage')" style="float: right;"><i class="fa fa-print" aria-hidden="true"></i> </button>
+         <button class="btn btn-primary " id="print_fullpage" onclick="Export2Doc('printfullpage','Documentation')" style="float: right;margin-right: 12px;"><i class="fa fa-file" aria-hidden="true"></i> </button>
+      </div>
+      <!--//doc-header-->
+      <div class="doc-body row">
+         <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex" style="overflow-y: auto;">
+            <div id="doc-nav" class="doc-nav">
+               <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+               <span style="text-align: center"><b>Comprehensive Accounting(CA) Administration Panel</b></span>
+               <span style="border: 1px solid black;"></span>
+
+                <a class="nav-link scrollto" href="#Login"><b>Login</b></a>
+                <a class="nav-link scrollto" href="#Login"><b>Home</b></a>
+           
+
+               <!--//nav-->
+               <a class="nav-link scrollto" href="#Peoples_Section"><b>Peoples</b></a>
+                  <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                     <a class="nav-link scrollto menu-style" href="#UserRole">
+                     <i class="fas fa-angle-right"></i>
+                     &nbsp;User Role</a>
+                  </nav> 
+                  <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                     <a class="nav-link scrollto menu-style" href="#AdminRole">
+                     <i class="fas fa-angle-right"></i>
+                     &nbsp;Admin Role</a>
+                  </nav>
+                  <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                     <a class="nav-link scrollto menu-style" href="#Admin">
+                     <i class="fas fa-angle-right"></i>
+                     &nbsp;Admin</a>
+                  </nav>               
+                  <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                     <a class="nav-link scrollto menu-style" href="#User">
+                     <i class="fas fa-angle-right"></i>
+                     &nbsp;User</a>
+                  </nav>               
+               
+               <a class="nav-link scrollto" href="#Setup_Section"><b>Setup</b></a>
+                  <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                     <a class="nav-link scrollto menu-style" href="#GeneralSetup_Section">
+                     <i class="fas fa-angle-right"></i>
+                     &nbsp;General Setup</a>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#SectorSetup">Sector Setup</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#DomainSetup">Domain Setup</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#SubDomainSetup">Sub Domain Setup</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#ProjectSetup">Project Setup</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#Project/Department">Project/Department</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#Trade/Course">Trade/Course</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#BatchManage">Batch Manage</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#AccountsAccess">Accounts Access</a></li>
+                     </ul>
+                     <ul>
+                        <li><a class="nav-link scrollto menu-style" 
+                        href="#Activities">Activities</a></li>
+                     </ul>
+                     
+                     <a class="nav-link scrollto menu-style" href="#ProjectMerge">
+                        <i class="fas fa-angle-right"></i>
+                        &nbsp;Project Merge</a>
+                     
+                     <a class="nav-link scrollto menu-style" href="#ProjectTransfer">
+                        <i class="fas fa-angle-right"></i>
+                        &nbsp;Project Transfer</a>
+                     
+                     <a class="nav-link scrollto menu-style" href="#ChartOfAccounts_Section">
+                        <i class="fas fa-angle-right"></i>
+                        &nbsp;Chart of Accounts</a>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#Nature">Nature</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#MainGroup">Main Group</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#ControlGroup">Control Group</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#GeneralLedger">General Ledger</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#SubsidiaryLedger">Subsidiary Ledger</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#ChartOfAccounts">Chart of Accounts</a></li>
+                        </ul>
+
+                     <a class="nav-link scrollto menu-style" href="#SubLedger_Section">
+                        <i class="fas fa-angle-right"></i>
+                        &nbsp;Sub Ledger</a>
+                        <ul> 
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#SubLedgerCategory">Sub Ledger Category</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#SubLedgerGroup">SubLedger Group</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#ProjectWiseGroup">Project Wise Group</a></li>
+                        </ul>
+                     <a class="nav-link scrollto menu-style" href="#Config_Section">
+                        <i class="fas fa-angle-right"></i>
+                        &nbsp;Config</a>
+                        <ul> 
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#DepreciationRate">Depreciation Rate</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#DepreciationCode">Depreciation Code</a></li>
+                        </ul>
+                        <ul>
+                           <li><a class="nav-link scrollto menu-style" 
+                           href="#GeneralConfiguration">General Configuration</a></li>
+                        </ul>
+                  
+               
+                  </nav> 
+               <!--//nav-->
+            </div>
+         </div>
+         <div class="doc-content col-md-9 col-12 order-1">
+            <div class="content-inner">
+               <div id="printfullpage">
+                  <div id="printcontent">
+                     <section id="general-template" class="doc" >
+                        <div id="printinstallation">
+                           <h2 class="section-title"></h2>
+                           <h2 class="section-title"></h2>
+                           <div id="step1"  class="section-block">
+                              <div>
+                                <!--  <img loading="lazy" data-src="https://imikrof.github.io/assets/images/cover.png" id="cover" style="width: 829px;height: 1200px;margin-left: -2px;"> -->
+                              </div>
+                           </div>
+                     </section>
+<!--//doc-section-->
+<div class="area">
+   <h4 style="text-align: center;"><b>Comprehensive Accounting(CA)-Administration Panel</b><h4><hr>
+
+    <!--
+    <div class="page-header">
+           <h3>সূচিপত্র </h3>
+
+           <table class='table'  id="text_style">
+                   <thead>
+                       <th>বিষয়</th>
+                       <th>পৃষ্ঠা </th>
+                   </thead>
+                     <tbody>
+                        
+                        <tr>
+                           <td><a class="nav-link scrollto" href="#intro_section">১.কিভাবে শুরু করবেন </a></td>
+                           <td>৯</td>
+                       </tr>
+
+                       <tr>
+                           <td><a class="nav-link scrollto" href="#login_section">২.সফটওয়্যারে লগইন করার নিয়মাবলী</a></td>
+                           <td>১০</td>
+                       </tr>
+
+                    
+
+                       
+                          <tr>
+                           <td>
+                             <h4 style="text-align: center;"><b>AIS(Accounting Information System)</b></h4>
+                             <hr>
+                          </td>
+                       </tr>
+
+
+
+                           <tr>
+                           <td>
+                               <a class="nav-link scrollto" href="#chart_of_account">
+                                   ১.চার্ট অফ একাউন্ট(Chart Of Account) খোলার নিয়মাবলী
+
+
+                                </a>
+                            </td>
+                           <td>১</td>
+                       </tr>
+
+                         <tr>
+                           <td>
+                               <a class="nav-link scrollto" href="#auto_vouchar">
+                                   ২.অটো ভাউচার কনফিগারেশন(Auto Voucher Configuration) সফটওয়্যারে এন্ট্রির নিয়মাবলী
+                                </a>
+                            </td>
+                           <td>২</td>
+                       </tr>
+
+                        
+
+                       <tr>
+                         <td>
+                             <a class="nav-link scrollto" href="#ais_report">
+                                 ১১.রিপোর্টস
+                              </a>
+                          </td>
+                         <td>১১</td>
+                     </tr>
+
+
+
+                   </tbody>
+
+               </table>
+   </div>       
+  -->
+
+       <section id="Login" style="margin-top: 78px; " class="doc-section">
+           <div id="printinstallation">
+               
+            <h2 class="section-title">কিভাবে সফটওয়্যারে লগইন করবেন</h2>
+               <div id="step1"  class="section-block">
+
+                  <p>
+                     Comprehensive Accounting সফটওয়্যারের Admin Panel এ লগইন করার জন্য প্রথমে আপনার কম্পিউটারের ইন্টারনেট কানেকশন নিশ্চিত করতে হবে। তারপর ইন্টারনেট ব্রাউজার ওপেন করতে হবে। সফটওয়্যারটির Recommended ইন্টারনেট ব্রাউজার হচ্ছে Google Chrome এবং Mozilla Firefox. তবে Updated যেকোনো Browser দ্বারা এই Software ব্যাবহার করা যাবে।
+                  </p>
+                  <p>
+                     ইন্টারনেট ব্রাউজার ওপেন করার পর ব্রাউজার এর Address Bar এ সফটওয়্যারের Login link (https://demo.caccounts.com/admin) লিখতে হবে।
+                  </p> 
+                  <p>
+                     Login link লেখার পর কী-বোর্ডের ইন্টার কী প্রেস করতে হবে,প্রেস করার পর উক্ত Software এ প্রবেশ করার জন্য একটি Login Form আসবে।
+                  </p>
+                  <img loading="lazy" class=" img-responsive" data-src="assets/images/0.Login.png" style="width: 765px;height: 340px;">
+                  <br>
+                  <p>
+                     লগইন ফর্মে দুইটি টেক্সট বক্স আছে, একটি Username এবং অপরটি Password। উক্ত টেক্সট বক্সে ইউজারনেইম ও পাসওয়ার্ড দেওয়ার পর লগইন বাটন এ ক্লিক করতে হবে।ইউজারনেইমও পাসওয়ার্ড যদি বৈধ হয় তা হলে সফটওয়্যারটি এক্সেস করার অনুমতি পাবেন। আর যদি বৈধ না হয় তাহলে পুনরায় লগইন ফর্মে ফেরত পাঠাবে।
+                  </p>
+                  <p>
+                     আপনি সফলভাবে Software এ Login করার পর নিচের Page টি দেখতে পাবেন। 
+                  </p>
+                  <img loading="lazy" class=" img-responsive" data-src="assets/images/0.1AfterLogin.png" style="width: 765px;height: 340px;">
+           </div>
+        </div>
+       </section>
+
+       <section id="UserRole" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">User Role</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>User Role:</b> User Role এ Click করলে আপনি Existing "User Role" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত User Role টি দেখতে পারবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/1.UserRoleList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন User Role Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে User Role থেকে Add new বাটনে Click করতে হবে এবং User Role নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন User Role টি Add হয়ে যাবে এবং সেটি আপনি User Role List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/2.UserRoleAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>User Role এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing User Role এর তথ্য Edit করার জন্য আপানাকে User Role List থেকে কাঙ্ক্ষিত User Role এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত User Role এর তথ্য টি User Role List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/3.UserRoleEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>User Role Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing User Role Delete করার জন্য আপনাকে User Role List থেকে কাঙ্ক্ষিত User Role এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/4.UserRoleDelete.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="AdminRole" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Admin Role</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Admin Role:</b> Admin Role এ Click করলে আপনি Existing "Admin Role" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Admin Role টি দেখতে পারবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/5.AdminRoleList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Admin Role Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Admin Role থেকে Add new বাটনে Click করতে হবে এবং Admin Role নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Admin Role টি Add হয়ে যাবে এবং সেটি আপনি Admin Role List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/6.AdminRoleAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Admin Role এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Admin Role এর তথ্য Edit করার জন্য আপানাকে Admin Role List থেকে কাঙ্ক্ষিত Admin Role এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Admin Role এর তথ্য টি Admin Role List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/7.AdminRoleEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Admin Role Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Admin Role Delete করার জন্য আপনাকে Admin Role List থেকে কাঙ্ক্ষিত Admin Role এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/8.AdminRoleDelete.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+     
+     <section id="Admin" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Admin</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Admin:</b> Admin এ Click করলে আপনি Existing "Admin" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Admin টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/9.AdminList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Admin Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Admin থেকে Add new বাটনে Click করতে হবে এবং Admin নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Admin টি Add হয়ে যাবে এবং সেটি আপনি Admin List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/10.AdminAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Admin এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing admin এর তথ্য Edit করার জন্য আপানাকে Admin List থেকে কাঙ্ক্ষিত admin এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Admin এর তথ্য টি Admin List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/11.AdminEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Admin Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Admin Delete করার জন্য আপনাকে Admin List থেকে কাঙ্ক্ষিত Admin এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/12.AdminDelete.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="User" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">User</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>User:</b> User এ Click করলে আপনি Existing "User" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত User টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/13.UserList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন User Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে User থেকে Add new বাটনে Click করতে হবে এবং User নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন User টি Add হয়ে যাবে এবং সেটি আপনি User List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/14.UserAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>User এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing User এর তথ্য Edit করার জন্য আপানাকে User List থেকে কাঙ্ক্ষিত User এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত User এর তথ্য টি User List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/15.UserEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>User Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing User Delete করার জন্য আপনাকে User List থেকে কাঙ্ক্ষিত User এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/16.UserDelete.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="SectorSetup" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Sector Setup</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Sector:</b> General Sector থেকে Sector Setup এ Click করলে আপনি Existing "Sector" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Sector টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/17.SectorList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Sector Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Sector Setup থেকে Add new বাটনে Click করতে হবে এবং Sector নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Sector টি Add হয়ে যাবে এবং সেটি আপনি Sector List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/18.SectorAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Sector এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Sector এর তথ্য Edit করার জন্য আপানাকে Sector List থেকে কাঙ্ক্ষিত Sector এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Sector এর তথ্য টি Sector List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/19.SectorEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Sector Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Sector Delete করার জন্য আপনাকে Sector List থেকে কাঙ্ক্ষিত Sector এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/20.SectorDelete.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+          
+     
+     <section id="DomainSetup" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Domain Setup</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Domain:</b> General Sector থেকে Domain Setup এ Click করলে আপনি Existing "Domain" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Domain টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/21.DomainList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Domain Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Domain Setup থেকে Add new বাটনে Click করতে হবে এবং Domain নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Domain টি Add হয়ে যাবে এবং সেটি আপনি Domain List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/22.DomainAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Domain এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Domain এর তথ্য Edit করার জন্য আপানাকে Domain List থেকে কাঙ্ক্ষিত Domain এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Domain এর তথ্য টি Domain List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/23.DomainEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Domain Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Domain Delete করার জন্য আপনাকে Domain List থেকে কাঙ্ক্ষিত Domain এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/24.DomainDelete.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Domain Setup থেকে Budget Lock/Unlock করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Domain এর Project সমূহের Budget Lock/Unlock করার জন্য আপনাকে Domain List থেকে কাঙ্ক্ষিত Domain এর ডান দিকে Budget Lock Button এ Click করতে হবে। তখন Budget lock নামের একটি Form Open হবে। Budget Lock করতে Lock Select করে Save button Click করতে হবে এবং Budget Unlock করতে, Unlock Select করে আপনি যে Fiscal Year এর Budget Unlock করতে চান সেই Fiscal Year Select করে Save করতে হবে। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/25.DomainBudgetLock.png" style="width: 765px;height: 340px;">
+         </div>
+      </div>
+     </section>
+     
+     <section id="SubDomainSetup" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Sub Domain Setup</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Sub Domain:</b> General Sector থেকে Sub Domain Setup এ Click করলে আপনি Existing "Sub Domain" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Sub Domain টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/26.SubDomainList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Sub Domain Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Sub Domain Setup থেকে Add new বাটনে Click করতে হবে এবং Sub Domain নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Sub Domain টি Add হয়ে যাবে এবং সেটি আপনি Sub Domain List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/27.SubDomainAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Sub Domain এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Sub Domain এর তথ্য Edit করার জন্য আপানাকে Sub Domain List থেকে কাঙ্ক্ষিত Sub Domain এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Sub Domain এর তথ্য টি Sub Domain List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/28.SubDomainEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Sub Domain Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Sub Domain Delete করার জন্য আপনাকে Sub Domain List থেকে কাঙ্ক্ষিত Sub Domain এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/29.SubDomainDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+     
+     <section id="ProjectSetup" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Project Setup</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Project:</b> General Sector থেকে Project Setup এ Click করলে আপনি Existing "Project" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Project টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/30.ProjectSetupList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Project Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Project Setup থেকে Add new বাটনে Click করতে হবে এবং Project নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Project টি Add হয়ে যাবে এবং সেটি আপনি Project List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/31.ProjectSetupAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Project এর তথ্য Edit করার জন্য আপানাকে Project List থেকে কাঙ্ক্ষিত Project এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Project এর তথ্য টি Project List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/32.ProjectSetupEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Project Delete করার জন্য আপনাকে Project List থেকে কাঙ্ক্ষিত Project এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/33.ProjectSetupDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="Project/Department" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Project/Department</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Project/Department:</b> General Sector থেকে Project/Department এ Click করলে আপনি Existing "Project/Department" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Project/Department টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/34.ProjectDepartmentList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Project/Department Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Project/Department থেকে Add new বাটনে Click করতে হবে এবং Project/Department নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Project/Department টি Add হয়ে যাবে এবং সেটি আপনি Project/Department List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/35.ProjectDepartmentAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project/Department এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Project/Department এর তথ্য Edit করার জন্য আপানাকে Project/Department List থেকে কাঙ্ক্ষিত Project/Department এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Project/Department এর তথ্য টি Project/Department List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/36.ProjectDepartmentEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project/Department Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Project/Department Delete করার জন্য আপনাকে Project/Department List থেকে কাঙ্ক্ষিত Project/Department এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/37.ProjectDepartmentDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="Trade/Course" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Trade/Course</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Trade/Course:</b> General Sector থেকে Trade/Course এ Click করলে আপনি Existing "Trade/Course" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Trade/Course টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/38.TradeCourseList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Trade/Course Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Trade/Course থেকে Add new বাটনে Click করতে হবে এবং Trade/Course নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Trade/Course টি Add হয়ে যাবে এবং সেটি আপনি Trade/Course List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/39.TradeCourseAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Trade/Course এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Trade/Course এর তথ্য Edit করার জন্য আপানাকে Trade/Course List থেকে কাঙ্ক্ষিত Trade/Course এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Trade/Course এর তথ্য টি Trade/Course List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/40.TradeCourseEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Trade/Course Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Trade/Course Delete করার জন্য আপনাকে Trade/Course List থেকে কাঙ্ক্ষিত Trade/Course এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/41.TradeCourseDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="BatchManage" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Batch Manage</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Batch Manage:</b> General Sector থেকে Batch Manage এ Click করলে আপনি Existing "Batch Manage" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Batch টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/42.BatchList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Batch Manage Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Batch Manage থেকে Add new বাটনে Click করতে হবে এবং Batch Manage নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Batch টি Add হয়ে যাবে এবং সেটি আপনি Batch Manage List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/43.BatchAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Batch এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Batch এর তথ্য Edit করার জন্য আপানাকে Batch Manage List থেকে কাঙ্ক্ষিত Batch এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Batch এর তথ্য টি Batch Manage List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/44.BatchEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Batch Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Batch Delete করার জন্য আপনাকে Batch Manage List থেকে কাঙ্ক্ষিত Batch এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/45.BatchDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+
+
+     <section id="AccountsAccess" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Accounts Access</h2>
+            <div id="step1"  class="section-block">
+
+             <p>
+                <b>Accounts Access:</b> General Sector থেকে Accounts Access এ Click করলে আপনি Existing Domain/Project এর Accounts সমূহের Access দিতে পারবেন অথবা Access Remove করতে পাবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/46.AccountAccess.png" style="width: 765px;height: 340px;">
+                           
+            </div>
+         </div>
+      </section>
+     
+     
+     <section id="Activities" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Activities</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Activities:</b> General Sector থেকে Activities এ Click করলে আপনি Existing "Activities" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Activity টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/47.ActivitiesList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>নতুন Activities Add করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Activities থেকে Add new বাটনে Click করতে হবে এবং Activities নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Activity টি Add হয়ে যাবে এবং সেটি আপনি Activities List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/48.ActivitiesAdd.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Activities এর তথ্য Edit করার নিয়মঃ</b>
+                </p>
+                <p>
+                  Existing Activities এর তথ্য Edit করার জন্য আপানাকে Activities List থেকে কাঙ্ক্ষিত Activity এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Batch এর তথ্য টি Activities List এ দেখতে পাবেন।
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/49.ActivitiesEdit.png" style="width: 765px;height: 340px;">
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Activities Delete করার নিয়মঃ </b>
+                </p>
+                <p>
+                  Existing Activities Delete করার জন্য আপনাকে Activities List থেকে কাঙ্ক্ষিত Activity এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/50.ActivitiesDelete.png" style="width: 765px;height: 340px;">                
+         </div>
+      </div>
+     </section>
+     
+     
+     <section id="ProjectMerge" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Project Merge</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Project Merge:</b> Project Merge এ Click করলে আপনি Existing "Merged Project" সমূহের List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Merged Project টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/51.ProjectMergeList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project Merge করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Project Merge থেকে +Project Merge বাটনে Click করতে হবে এবং Project Merge নামের একটি Form Open হবে। তারপর Form থেকে Date, Merge Project(যে Project টি Merge করতে চান) এবং Merge With(যে Project এর সাথে Merge করতে চান) সফলভাবে Select করার পর Save বাটনে Click করলে আপনার Selected Project টি আপনার কাঙ্ক্ষিত Project এর সাথে Merge হয়ে যাবে এবং সেটি আপনি Project Merge এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/52.ProjectMerge.png" style="width: 765px;height: 340px;">
+                 
+         </div>
+      </div>
+     </section>
+     
+     <section id="ProjectTransfer" style="margin-top: 78px; " class="doc-section">
+         <div id="printinstallation">
+             
+          <h2 class="section-title">Project Transfer</h2>
+             <div id="step1"  class="section-block">
+
+                <p>
+                   <b>Project Transfer:</b> Project Transfer এ Click করলে আপনি Existing "Transferred Project" সমূহের List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Transferred Project টি দেখতে পারবেন।
+                </p>
+                <br>
+                
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/53.ProjectTransferList.png" style="width: 765px;height: 340px;">
+                
+                
+                <br> 
+                <br>
+                <p>
+                  <b>Project Transfer করার নিয়মঃ</b>
+                </p>
+                <p>
+                  আপনাকে Project Transfer থেকে +Project Transfer বাটনে Click করতে হবে এবং Project Transfer নামের একটি Form Open হবে। তারপর Form থেকে Project(যে Project টি Transfer করতে চান) এবং Domain To(যে Domain এ Transfer করতে চান) সফলভাবে Select করার পর Save বাটনে Click করলে আপনার Selected Project টি আপনার কাঙ্ক্ষিত Domain এর Transfer হয়ে যাবে এবং সেটি আপনি Project Transfer List এ দেখতে পাবেন।  
+                </p>
+                <br>
+                <p>
+                  চিত্রে পেইজটি দেখানো হলঃ
+                </p> 
+                <img loading="lazy" class=" img-responsive" data-src="assets/images/54.ProjectTransfer.png" style="width: 765px;height: 340px;">
+                 
+         </div>
+      </div>
+     </section>
+
+
+     <section id="Nature" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Nature</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Nature:</b> Chart of Accounts থেকে Nature এ Click করলে আপনি Existing "Nature" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও Chart of Accounts এর কাঙ্ক্ষিত Nature টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/55.NatureList.png" style="width: 765px;height: 340px;">
+                            
+      </div>
+   </div>
+  </section>
+  
+  
+  <section id="MainGroup" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Main Group</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Main Group:</b> Chart of Accounts থেকে Main Group এ Click করলে আপনি Existing "Main Group" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Main Group টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/56.MainGroupList.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>নতুন Main Group Add করার নিয়মঃ</b>
+             </p>
+             <p>
+               আপনাকে Main Group থেকে Add new বাটনে Click করতে হবে এবং Main Group নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Main Group টি Add হয়ে যাবে এবং সেটি আপনি Main Group List এ দেখতে পাবেন।  
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/57.AddMainGroup.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>Main Group এর তথ্য Edit করার নিয়মঃ</b>
+             </p>
+             <p>
+               Existing Main Group এর তথ্য Edit করার জন্য আপানাকে Main Group List থেকে কাঙ্ক্ষিত Main Group এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Main Group এর তথ্য টি Main Group List এ দেখতে পাবেন।
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/58.EditMainGrou.png" style="width: 765px;height: 340px;">
+             
+             <br> 
+             <br>
+             <p>
+               <b>Main Group Delete করার নিয়মঃ </b>
+             </p>
+             <p>
+               Existing Main Group Delete করার জন্য আপনাকে Main Group List থেকে কাঙ্ক্ষিত Main Group এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/59.DeleteMainGroup.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+  
+  <section id="ControlGroup" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Control Group</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Control Group:</b> Chart of Accounts থেকে Control Group এ Click করলে আপনি Existing "Control Group" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Control Group টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/60.ControlGroupList.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>নতুন Control Group Add করার নিয়মঃ</b>
+             </p>
+             <p>
+               আপনাকে Control Group থেকে Add new বাটনে Click করতে হবে এবং Control Group নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Control Group টি Add হয়ে যাবে এবং সেটি আপনি Control Group List এ দেখতে পাবেন।  
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/61.AddControlGroup.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>Control Group এর তথ্য Edit করার নিয়মঃ</b>
+             </p>
+             <p>
+               Existing Control Group এর তথ্য Edit করার জন্য আপানাকে Control Group List থেকে কাঙ্ক্ষিত Control Group এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Control Group এর তথ্য টি Control Group List এ দেখতে পাবেন।
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/62.EditControlGroup.png" style="width: 765px;height: 340px;">
+             
+             <br> 
+             <br>
+             <p>
+               <b>Control Group Delete করার নিয়মঃ </b>
+             </p>
+             <p>
+               Existing Control Group Delete করার জন্য আপনাকে Control Group List থেকে কাঙ্ক্ষিত Control Group এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/63.DeleteControlGroup.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+  
+  <section id="GeneralLedger" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">General Ledger</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>General Ledger:</b> Chart of Accounts থেকে General Ledger এ Click করলে আপনি Existing "General Ledger" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত General Ledger টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/64.GeneralLedgerList.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>নতুন General Ledger Add করার নিয়মঃ</b>
+             </p>
+             <p>
+               আপনাকে General Ledger থেকে Add new বাটনে Click করতে হবে এবং General Ledger নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন General Ledger টি Add হয়ে যাবে এবং সেটি আপনি General Ledger List এ দেখতে পাবেন।  
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/65.AddGeneralLedger.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>General Ledger এর তথ্য Edit করার নিয়মঃ</b>
+             </p>
+             <p>
+               Existing General Ledger এর তথ্য Edit করার জন্য আপানাকে General Ledger List থেকে কাঙ্ক্ষিত General Ledger এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত General Ledger এর তথ্য টি General Ledger List এ দেখতে পাবেন।
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/66.EditGeneralLedger.png" style="width: 765px;height: 340px;">
+             
+             <br> 
+             <br>
+             <p>
+               <b>General Ledger Delete করার নিয়মঃ </b>
+             </p>
+             <p>
+               Existing General Ledger Delete করার জন্য আপনাকে General Ledger List থেকে কাঙ্ক্ষিত General Ledger এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/67.DeleteGeneralLedger.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+  
+  <section id="SubsidiaryLedger" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Subsidiary Ledger</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Subsidiary Ledger:</b> Chart of Accounts থেকে Subsidiary Ledger এ Click করলে আপনি Existing "Subsidiary Ledger" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Subsidiary Ledger টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/68.SubsidiaryLedgerList.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>নতুন Subsidiary Ledger Add করার নিয়মঃ</b>
+             </p>
+             <p>
+               আপনাকে Subsidiary Ledger থেকে Add new বাটনে Click করতে হবে এবং Subsidiary Ledger নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Subsidiary Ledger টি Add হয়ে যাবে এবং সেটি আপনি Subsidiary Ledger List এ দেখতে পাবেন।  
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/69.AddSubsidiaryLedger.png" style="width: 765px;height: 340px;">
+             
+             
+             <br> 
+             <br>
+             <p>
+               <b>Subsidiary Ledger এর তথ্য Edit করার নিয়মঃ</b>
+             </p>
+             <p>
+               Existing Subsidiary Ledger এর তথ্য Edit করার জন্য আপানাকে Subsidiary Ledger List থেকে কাঙ্ক্ষিত Subsidiary Ledger এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Subsidiary Ledger এর তথ্য টি Subsidiary Ledger List এ দেখতে পাবেন।
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/70.EditSubsidiaryLedger.png" style="width: 765px;height: 340px;">
+             
+             <br> 
+             <br>
+             <p>
+               <b>Subsidiary Ledger Delete করার নিয়মঃ </b>
+             </p>
+             <p>
+               Existing Subsidiary Ledger Delete করার জন্য আপনাকে Subsidiary Ledger List থেকে কাঙ্ক্ষিত Subsidiary Ledger এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+             </p>
+             <br>
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/71.DeleteSubsidiaryLedger.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+  
+  
+  <section id="ChartOfAccounts" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Chart of Accounts</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Chart of Accounts:</b> Chart of Accounts থেকে Chart of Accounts এ Click করলে আপনি Existing "Chart of Accounts" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Chart of Accounts টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/72.ChartOfAccountsList.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+  
+  <section id="SubLedgerCategory" style="margin-top: 78px; " class="doc-section">
+      <div id="printinstallation">
+          
+       <h2 class="section-title">Sub Ledger Category</h2>
+          <div id="step1"  class="section-block">
+
+             <p>
+                <b>Sub Ledger Category:</b> Sub Ledger থেকে Sub Ledger Category তে Click করলে আপনি Existing "Sub Ledger Category" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Sub Ledger Category টি দেখতে পারবেন।
+             </p>
+             <br>
+             
+             <p>
+               চিত্রে পেইজটি দেখানো হলঃ
+             </p> 
+             <img loading="lazy" class=" img-responsive" data-src="assets/images/73.SubLedgerCategoryList.png" style="width: 765px;height: 340px;">                
+      </div>
+   </div>
+  </section>
+
+
+  <section id="SubLedgerGroup" style="margin-top: 78px; " class="doc-section">
+    <div id="printinstallation">
+        
+     <h2 class="section-title">Sub Ledger Group</h2>
+        <div id="step1"  class="section-block">
+
+           <p>
+              <b>Sub Ledger Group:</b> Sub Ledger থেকে Sub Ledger Group এ Click করলে আপনি Existing "Sub Ledger Group" এর List দেখতে পাবেন। এখান থেকে Search Box এ আপনার প্রয়োজনানুসারে Search করেও কাঙ্ক্ষিত Sub Ledger Group টি দেখতে পারবেন।
+           </p>
+           <br>
+           
+           <p>
+             চিত্রে পেইজটি দেখানো হলঃ
+           </p> 
+           <img loading="lazy" class=" img-responsive" data-src="assets/images/74.SubLedgerGroupList.png" style="width: 765px;height: 340px;">
+           
+           
+           <br> 
+           <br>
+           <p>
+             <b>নতুন Sub Ledger Group Add করার নিয়মঃ</b>
+           </p>
+           <p>
+             আপনাকে Sub Ledger Group থেকে Add new বাটনে Click করতে হবে এবং Sub Ledger Group নামের একটি Form Open হবে। তারপর সকল Field এর তথ্য সঠিক ভাবে Select/Fillup করার পর Save বাটনে Click করলে নতুন Sub Ledger Group টি Add হয়ে যাবে এবং সেটি আপনি Sub Ledger Group List এ দেখতে পাবেন।  
+           </p>
+           <br>
+           <p>
+             চিত্রে পেইজটি দেখানো হলঃ
+           </p> 
+           <img loading="lazy" class=" img-responsive" data-src="assets/images/75.AddSubLedgerGroup.png" style="width: 765px;height: 340px;">
+           
+           
+           <br> 
+           <br>
+           <p>
+             <b>Sub Ledger Group এর তথ্য Edit করার নিয়মঃ</b>
+           </p>
+           <p>
+             Existing Sub Ledger Group এর তথ্য Edit করার জন্য আপানাকে Sub Ledger Group List থেকে কাঙ্ক্ষিত Sub Ledger Group এর ডান দিকে Edit Button (পেন্সিলের মতো) এ Click করতে হবে। তখন পূর্বের তথ্যাবলী সহ একটি Form Open হবে। প্রয়োজনীয় তথ্যাদি Correction করার পর Save বাটনে Click করলে সংশোধিত Sub Ledger Group এর তথ্য টি Sub Ledger Group List এ দেখতে পাবেন।
+           </p>
+           <br>
+           <p>
+             চিত্রে পেইজটি দেখানো হলঃ
+           </p> 
+           <img loading="lazy" class=" img-responsive" data-src="assets/images/76.EditSubLedgerGroup.png" style="width: 765px;height: 340px;">
+           
+           <br> 
+           <br>
+           <p>
+             <b>Sub Ledger Group Delete করার নিয়মঃ </b>
+           </p>
+           <p>
+             Existing Sub Ledger Group Delete করার জন্য আপনাকে Sub Ledger Group List থেকে কাঙ্ক্ষিত Sub Ledger Group এর ডান দিকে Delete Button এ Click করতে হবে। তখন আপনাকে একটি নিশ্চিতকরণ মেসেজ দেখানো হবে, যেখানে আপনাকে জিজ্ঞাসা করা হবে “আপনি কি নিশ্চিত? এটি Delete করতে চান? আপনি এটি Delete করলে পুনরায় ফিরে পাবেন না!” এখন আপনি যদি নিশ্চিত হয়ে Delete করতে চান তাহলে Delete বাটনে Click করবেন। অন্যথায় Close বাটনে Click করে আগের মেনুতে ফিরে আসবেন। 
+           </p>
+           <br>
+           <p>
+             চিত্রে পেইজটি দেখানো হলঃ
+           </p> 
+           <img loading="lazy" class=" img-responsive" data-src="assets/images/77.DeleteSubLedgerGroup.png" style="width: 765px;height: 340px;">                
+    </div>
+ </div>
+</section>
+
+
+<section id="ProjectWiseGroup" style="margin-top: 78px; " class="doc-section">
+  <div id="printinstallation">
+      
+   <h2 class="section-title">Project Wise Group</h2>
+        <div id="step1"  class="section-block">
+
+         <p>
+            <b>Project Wise Group:</b> Sub Ledger Group থেকে Project Wise Group এ Click করলে আপনি Existing Project এর Accounts সমূহের Access দিতে পারবেন অথবা Access Remove করতে পাবেন।
+         </p>
+         <br>
+         
+         <p>
+           চিত্রে পেইজটি দেখানো হলঃ
+         </p> 
+         <img loading="lazy" class=" img-responsive" data-src="assets/images/78.ProjectWiseGroup.png" style="width: 765px;height: 340px;">
+                       
+        </div>
+     </div>
+  </section>
+  
+  
+  <section id="DepreciationRate" style="margin-top: 78px; " class="doc-section">
+  <div id="printinstallation">
+      
+   <h2 class="section-title">Depreciation Rate</h2>
+        <div id="step1"  class="section-block">
+
+         <p>
+            <b>Depreciation Rate:</b> Config থেকে Depreciation Rate এ Click করলে আপনি General Ledger সমূহের Existing Depreciation Rate দেখতে পাবেন। আপনি এখান থেকে আপনার প্রয়োজনানুসারে General Ledger এর বিপরীতে Depreciation Rate পরিবর্তন করে Save করতে পারবেন।
+         </p>
+         <br>
+         
+         <p>
+           চিত্রে পেইজটি দেখানো হলঃ
+         </p> 
+         <img loading="lazy" class=" img-responsive" data-src="assets/images/79.DepreciationRate.png" style="width: 765px;height: 340px;">
+                       
+        </div>
+     </div>
+  </section>
+  
+  
+  <section id="DepreciationCode" style="margin-top: 78px; " class="doc-section">
+  <div id="printinstallation">
+      
+   <h2 class="section-title">Depreciation Code</h2>
+        <div id="step1"  class="section-block">
+
+         <p>
+            <b>Depreciation Code:</b> Config থেকে Depreciation Code এ Click করলে আপনি Fixed Asset সমূহের Existing Depreciation Code এবং Accumulated Depreciation Code দেখতে পাবেন। আপনি এখান থেকে আপনার প্রয়োজনানুসারে Fixed Asset সমূহের বিপরীতে Depreciation Code এবং Accumulated Depreciation Code পরিবর্তন করে Save করতে পারবেন।
+         </p>
+         <br>
+         
+         <p>
+           চিত্রে পেইজটি দেখানো হলঃ
+         </p> 
+         <img loading="lazy" class=" img-responsive" data-src="assets/images/80.DepreciationCode.png" style="width: 765px;height: 340px;">
+                       
+        </div>
+     </div>
+  </section>
+  
+  
+  <section id="GeneralConfiguration" style="margin-top: 78px; " class="doc-section">
+  <div id="printinstallation">
+      
+   <h2 class="section-title">General Configuration</h2>
+        <div id="step1"  class="section-block">
+
+         <p>
+            <b>General Configuration:</b> Config থেকে General Configuration এ Click করলে আপনি Report এবং Budget সমূহের Fraction এর Existing Status দেখতে পাবেন। আপনি এখান থেকে আপনার প্রয়োজনানুসারে Report এবং Budget সমূহের Fraction On/Off করে Save করতে পারবেন।
+         </p>
+         <br>
+         
+         <p>
+           চিত্রে পেইজটি দেখানো হলঃ
+         </p> 
+         <img loading="lazy" class=" img-responsive" data-src="assets/images/81.GeneralConfiguration.png" style="width: 765px;height: 340px;">
+                       
+        </div>
+     </div>
+  </section>
+
+       <!-- ==================================================== -->
+       <!-- ==================================================== -->
+
+               
+</div>
+       
+
+<!--//doc-section-->
+<h3 style="text-align: center;">সমাপ্ত</h3>
+<hr>
+</div>
+</div>
+</div><!--//content-inner-->
+</div>
+<!--//doc-content-->
+<!--//doc-sidebar-->
+</div>
+<!--//doc-body-->
+</div>
+<!--//container-->
+</div>
+<!--//doc-wrapper-->
+<div id="promo-block" class="promo-block" style="background:#f5ab35">
+<div class="container">
+<div class="promo-block-inner">
+<div class="row">
+<div class="content-holder col-lg-7 col-md-6 col-12">
+   <div class="content-holder-inner">
+      <div class="desc">
+      </div>
+      <!--//desc-->
+   </div>
+   <!--//content-holder-inner-->
+</div>
+<!--//content-holder-->
+</div>
+<!--//row-->
+</div>
+<!--//promo-block-inner-->
+</div>
+<!--//container-->
+</div>
+<!--//promo-block-->
+</div>
+<!--//page-wrapper-->
+<footer id="footer" class="footer text-center" style="    margin-top: -45px;margin-bottom: -51px;">
+<div class="container">
+<!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+<small class="copyright">Design &amp; Developed By <a href="https://tmss-ict.com/" target="_blank">Tmss-ict</a></small>
+</div>
+<!--//container-->
+</footer>
+<!--//footer-->
+
+<!-- Main Javascript -->
+<script type="text/javascript" data-src="assets/plugins/jquery-3.3.1.min.js"></script>
+<!-- <script type="text/javascript" data-src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" data-src="assets/plugins/prism/prism.js"></script>
+<script type="text/javascript" data-src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" data-src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+<script type="text/javascript" data-src="assets/js/main.js"></script>
+
+</body>
+
+<script type="text/javascript">
+
+function Export2Doc(element, filename = '') {
+
+var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+var postHtml = "</body></html>";
+
+var html = preHtml + document.getElementById(element).innerHTML + postHtml;
+
+var blob = new Blob(['\ufeff', html], {
+type: 'application/msword'
+});
+
+var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+
+
+filename = filename ? filename + '.doc' : 'document.doc';
+
+
+var downloadLink = document.createElement("a");
+
+document.body.appendChild(downloadLink);
+
+if (navigator.msSaveOrOpenBlob) {
+navigator.msSaveOrOpenBlob(blob, filename);
+} else {
+
+downloadLink.href = url;
+downloadLink.download = filename;
+downloadLink.click();
+}
+
+document.body.removeChild(downloadLink);
+}
+
+
+function printFullpage(divName)
+{
+var divToPrint=document.getElementById(divName);
+var newWin=window.open('','Print-Window');
+newWin.document.open();
+newWin.document.write('<html> <style type="text/css">body{margin:30px; line-height:40px;} .area a , h1 ,p{font-size:20px; } a{ text-decoration:none;}a:link{color:black;}a:visited{color:black;} #text_style{margin-left:5%;} </style><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+newWin.document.close();
+}
+
+const images = document.querySelectorAll('[data-src]');
+
+const option_get = {
+// If the image gets within 50px in the Y axis, start the download.
+root: null, // Page as root
+rootMargin: '0px',
+threshold: 0.1
+};
+
+const fetchImage = (url) => {
+console.log(url)
+return new Promise((resolve, reject) => {
+const image = new Image();
+image.src = url;
+image.onload = resolve;
+image.onerror = reject;
+});
+}
+
+const loadImage = (image) => {
+const src = image.dataset.src;
+console.log(src);
+fetchImage(src).then(() => {
+image.src = src;
+})
+}
+
+const handleIntersection = (entries, observer) => {
+entries.forEach(entry => {
+if(entry.intersectionRatio > 0) {
+console.log(entry.intersectionRatio);
+loadImage(entry.target)
+}
+})
+}
+
+// The observer for the images on the page
+const observer = new IntersectionObserver(handleIntersection, option_get);
+
+images.forEach(img => {
+observer.observe(img);
+})
+</script>
+</html>
